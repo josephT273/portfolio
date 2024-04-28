@@ -1,0 +1,18 @@
+#root {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.contentCenter .round
+{
+  border-radius: 50%;
+  box-shadow: 10px 0px 10px rgb(20, 22, 29);
+  overflow: hidden;
+}
