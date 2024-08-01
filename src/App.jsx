@@ -1,26 +1,60 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import ReactMarkdown from "react-markdown";
+import avatar from "./assets/avatar.jpg";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [markdown, setMarkdown] = useState();
+  import("./md/josepht273.md").then((res) => {
+    fetch(res.default)
+      .then((response) => response.text())
+      .then((text) => setMarkdown(text));
+  });
 
   return (
     <>
-      <div className='container'>
+      <div className="container">
         <div className="contentCenter">
-          <img src='https://ugc.production.linktr.ee/nOuNk5zXQ0iB35AC2ycS_image?io=true&size=avatar-v3_0' className='round' alt='Joseph Tadesse' />
+          <img src={avatar} className="round" alt="Joseph Tadesse" />
           <ul>
-            <h2>Joseph Tadesse AKA JosephT273</h2>
-            <li>Hey their👋, My name is Joseph Tadesse AKA JosephT273.
-              <br />I'm Junior full stack developer.</li>
-            <li className='link'><a href="https://linktr.ee/josepht273">JosephT273 Linktree</a></li>
+            <h2>Joseph Tadesse</h2>
+            <li>
+              Hey their👋, My name is Joseph Tadesse AKA JosephT273. I&apos;m
+              Junior full stack developer.
+            </li>
+            <li className="link">
+              <a href="https://linktr.ee/josepht273">JosephT273 Linktree</a>
+            </li>
           </ul>
         </div>
+        <ReactMarkdown className="markdown">{markdown}</ReactMarkdown>
+      </div>
+      <div className="socialLinks">
+        <a href="https://facebook.com/jospht273">
+          <i className="fa fa-brands fa-facebook"></i>
+        </a>
+
+        <a href="https://x.com/josepht273">
+          <i className="fa fa-brands fa-twitter"></i>
+        </a>
+
+        <a href="https://linkedin.com/in/josepht273">
+          <i className="fa fa-brands fa-linkedin"></i>
+        </a>
+
+        <a href="https://instagram.com/joe.tade">
+          <i className="fa fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://reddit.com/user/josepht273">
+          <i className="fa reddit fa-brands fa-reddit"></i>
+        </a>
+        <a href="https://t.me/josepht273">
+          <i className="fa fa-brands fa-telegram"></i>
+        </a>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

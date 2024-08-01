@@ -2,19 +2,64 @@
   max-width: 100%;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  background-image: url("./assets/background.jpg");
 }
 
 .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+}
+.contentCenter li {
+  list-style: none;
+  font-size: 20px;
+  text-align: center;
+  line-height: 30px;
+}
+li {
+  list-style: none;
+  font-size: 20px;
+  line-height: 30px;
+}
+.contentCenter {
+  max-width: 1000px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.contentCenter .round {
+  border-radius: 5%;
+  overflow: hidden;
+  width: 450px;
+  transition: 0.1s ease-in;
 }
 
-.contentCenter .round
-{
-  border-radius: 50%;
-  box-shadow: 10px 0px 10px rgb(20, 22, 29);
-  overflow: hidden;
-  width: 200px;
-  height: 200px;
+.contentCenter .round:hover {
+  scale: 1.2;
+}
+.markdown {
+  flex-grow: calc(100% - 300px);
+  max-width: 1000px;
+  min-height: 100hv;
+}
+
+.fa {
+  font-size: 40px;
+  margin: 10px;
+  transition: 0.1s ease-in-out;
+}
+.fa:hover {
+  scale: 1.1;
+}
+.fa.reddit {
+  color: orangered;
+}
+.socialLinks {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
