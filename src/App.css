@@ -28,18 +28,14 @@ li {
   justify-content: center;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 .contentCenter .round {
   border-radius: 5%;
   overflow: hidden;
-  width: 450px;
+  max-width: 450px;
   transition: 0.1s ease-in;
 }
 
-.contentCenter .round:hover {
-  scale: 1.2;
-}
 .markdown {
   flex-grow: calc(100% - 300px);
   max-width: 1000px;
@@ -62,4 +58,14 @@ li {
   align-items: center;
   justify-content: center;
   display: flex;
+}
+
+@media (max-width: 768px) {
+  .contentCenter .round {
+    max-width: 100%;
+    border-radius: 0;
+  }
+  #root {
+    padding: 0;
+  }
 }
