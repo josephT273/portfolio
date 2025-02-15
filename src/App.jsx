@@ -1,4 +1,5 @@
 import AboutMe from "./components/AboutMe";
+import BlogList from "./components/BlogList";
 function App() {
   return (
     <div className="bd-white">
@@ -21,6 +22,7 @@ function App() {
         </nav>
       </header>
       <AboutMe />
+      <BlogList />
     </div>
   );
 }
