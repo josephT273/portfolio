@@ -27,7 +27,7 @@ const BlogList = () => {
   ];
 
   return (
-    <div className="mt-10 w-full p-20">
+    <div className="mt-10 w-full p-20" id="blogs">
       <h2 className="text-2xl font-bold text-center sm:text-left mb-4">
         📖 My Latest Blogs
       </h2>

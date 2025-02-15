@@ -1,4 +1,3 @@
-import avatar from "../assets/avatar.jpg";
 import SocialIcons from "../components/SocialIcons";
 
 const AboutMe = () => {
@@ -19,8 +18,8 @@ const AboutMe = () => {
 
       <div className="flex flex-col sm:flex-row justify-center items-center m-4 sm:m-10 p-6 sm:p-10 w-[calc(100%-2rem)] sm:w-[calc(100%-4rem)] h-auto">
         <img
-          src={avatar}
-          className="w-32 h-32 sm:w-48 sm:h-48 md:w-96 md:h-96 rounded-full mb-4 sm:mb-0 sm:mr-8"
+          src="https://pbs.twimg.com/profile_images/1885338567603298304/Oe3cqSts_400x400.jpg"
+          className="w-32 h-32 sm:w-48 sm:h-48 md:w-96 md:h-96 shadow-2xs mb-4 sm:mb-0 sm:mr-8 border-4"
           alt="Joseph Tadesse"
         />
         <div className="flex flex-col justify-center text-center sm:text-left max-w-xs sm:max-w-md">
